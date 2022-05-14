@@ -1,0 +1,183 @@
+html{
+    background:white;
+}
+#header{
+    position: relative;
+    top: -120px;
+    height: 500px;
+    background-image: url('https://moa.gov.jo/ebv4.0/root_storage/ar/eb_story_board/1_-_copy.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    box-shadow: 0px 12px 13px 1px rgba(65, 212, 90, 0.37), inset 0 15px 20px 1px rgba(42, 236, 58, 0.2);
+}
+
+.paAndUs {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-items: stretch;
+    background: rgb(34, 117, 48);
+    padding: 25px;
+    /* margin-top: -120px; */
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+}
+ .us img{
+    width:500px;
+}
+.pa {
+    width:400px;
+}
+h2{
+    text-align: center;
+}
+#nav{
+    position: absolute;
+    display: flex;
+    bottom: 0;
+    width: 97%;
+    flex-wrap: wrap;
+    flex-direction: row;
+    margin-bottom: 21px;
+    padding: 0;
+    justify-content: space-evenly;
+}
+
+li{
+    color :white;
+    width:150px;
+    display: inline-block;
+    /* padding-left:0px; */
+    text-align:center;
+    background:rgb(42, 139, 75);
+    padding: 5px;
+    border-radius:5px ;
+   }
+/*
+   li:hover{
+       cursor: pointer;
+       background-color:rgb(42, 126, 74);
+       color:black;
+       transition: 1s;
+    border-radius:7px ;
+
+   }*/
+   .grid{
+
+    margin: 80px;
+    display: flex;
+    grid-template-columns: repeat(3,1fr);
+    grid-gap: 30px;
+    align-items: stretch;
+    justify-content: space-around;
+    flex-direction: row;
+    flex-wrap: wrap;
+   }
+   .grid > article{
+       background-color:rgb(37, 121, 37);
+       border: none;
+       box-shadow: 2px 2px 2px 6px 0px rgba(5, 5, 5, 0.3);
+       border-radius: 20px;
+       text-align:center;
+       width: 250px;
+       transition:trasform .3;
+   }
+   .grid > article:hover{
+       transform: translateY(5px);
+       box-shadow: 2px 2px 26px 6px 0px rgba(0,0,0,0.3);
+   }
+   .grid > article img{
+       width:95%;
+       border-top-left-radius:20px; 
+       border-top-right-radius:20px ;
+   }
+   .text{
+       /* position: absolute; */
+       padding: 0 20px 20px;
+   }
+   text h3 {
+       text-transform: uppercase;
+   }
+   .text button{
+       background-color: crimson;
+       border-radius:20px;
+       border:none;
+       color: #fff;
+       padding:10px;
+       width:100%;
+       font-weight:600;
+       text-transform: uppercase;
+       cursor: pointer;
+   }
+   
+.Home{
+    height: 34px;
+    align-items: center;
+    display: flex;
+    text-align: center;
+}
+
+.f1 {
+    background-color: rgb(34, 117, 48);
+    width: 100%;
+    margin: 0%;
+    padding: 1%;
+}
+
+
+
+@media screen and (max-width:800px ){
+    #header {
+        
+        height: 330px;
+        background-repeat: no-repeat;
+        
+    }
+
+
+    a{
+        margin-bottom: 18px;
+    }
+
+    
+}
+
+
+@media screen and (max-width:625px ){
+        #header {
+            
+            height: 450px;
+            background-repeat: no-repeat;
+            background-image: url("https://moa.gov.jo/ebv4.0/root_storage/ar/eb_story_board/1_-_copy.jpg");
+            
+        }
+        .paAndUs .us img{
+            width:270px;
+        }
+        .pa p{
+            width:270px;
+        }
+        
+        a{
+            margin-bottom: 18px;
+        }
+
+        
+    }
+
+    @media screen and (max-width:300px) {
+        .grid{
+            margin: 10px;
+        }
+        .paAndUs .us img {
+            width: 230px;
+        }
+        .pa p {
+            width: 230px;
+        }
+        
+        
+    }
