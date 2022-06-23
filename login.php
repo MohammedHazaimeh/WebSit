@@ -1,4 +1,49 @@
 
+<?php
+session_start();
+require("connect.php");
+
+if(isset($_POST['login'])){
+    $sql="SELECT * from login where email=:email and password=:password";
+    $statement=$pdo->prepare($sql);
+    $email=$_POST['email'];
+    $password=$_POST['password'];
+
+    $statement->bindParam(":email",$email,PDO::PARAM_STR);
+    $statement->bindParam(":password",$password,PDO::PARAM_STR);
+    $statement->execute();
+    $count=$statement->rowCount();
+    if($count==1){
+        $_SESSION['email']=$email;
+        header("location:home.php");
+    }else{
+        echo "Invalid email or password";
+    }
+    $pdo=null;
+
+}
+
+
+?>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 <!DOCTYPE html>
 <html>
 
