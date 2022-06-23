@@ -1,3 +1,32 @@
+<?php
+require("connect.php");
+//register
+if($_SERVER['REQUEST_METHOD']=='POST'){
+$sql="INSERT INTO login (username,lname,email,password) values (:username,:lname,:email,:password)";
+$statement=$pdo->prepare($sql);
+$username=$_POST['username'];
+$lname=$_POST['lname'];
+$email=$_POST['email'];
+$password=$_POST['password'];
+
+$statement->bindParam(":username",$username,PDO::PARAM_STR);
+$statement->bindParam(":lname",$lname,PDO::PARAM_STR);
+$statement->bindParam(":email",$email,PDO::PARAM_STR);
+$statement->bindParam(":password",$password,PDO::PARAM_STR);
+$statement->execute();
+
+echo "done";
+
+}
+
+
+?>
+
+
+
+
+
+
 <!DOCTYPE html>
 <html>
 <head>
